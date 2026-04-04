@@ -1,4 +1,4 @@
-from classes import Task
+from src.classes import Task
 
 
 def merge_sort(list: list[Task]):
@@ -15,7 +15,7 @@ def merge(left: list[Task], right: list[Task]):
     sorted = []
     i, j = 0, 0
     while i < len(left) and j < len(right):
-        if left[i].duration <= right[j].duration:
+        if left[i].duration >= right[j].duration:
             sorted.append(left[i])
             i += 1
         else:
